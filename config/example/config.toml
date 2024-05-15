@@ -74,13 +74,17 @@ admin_ranks = [
 	{ name = "Mentor", rights = [
 		"+MENTOR",
 	] },
-	{ name = "Trial Admin", rights = [
+	{ name = "Moderator", rights = [
+		"+MOD",
+	] },
+
+	{ name = "Junior Administrator", rights = [
 		"+ADMIN",
 		"+BAN",
 		"+STEALTH",
 		"+REJUVINATE",
 	] },
-	{ name = "Game Admin", rights = [
+	{ name = "Administrator", rights = [
 		"+ADMIN",
 		"+BAN",
 		"+STEALTH",
@@ -95,32 +99,48 @@ admin_ranks = [
 		"+SOUND",
 		"+SPAWN",
 	] },
-	{ name = "Head of Staff", rights = [
+	{ name = "Senior Administrator", rights = [
+		"+ADMIN",
+		"+BAN",
+		"+STEALTH",
+		"+REJUVINATE",
+		"+DEBUG",
+		"+BUILDMODE",
+		"+EVENT",
+		"+SERVER",
+		"+POSSESS",
+		"+PROCCALL",
+		"+VAREDIT",
+		"+SOUND",
+		"+SPAWN",
+		"+RIGHTS",
+	] },
+	{ name = "Curator", rights = [
 		"+EVERYTHING",
 	] },
-	{ name = "Hosting Provider", rights = [
+	{ name = "Host", rights = [
 		"+EVERYTHING",
 	] },
-	{ name = "Maintainers", rights = [
+	{ name = "Head Coder", rights = [
 		"+EVERYTHING",
 	] },
 ]
 # List of people and the admin rank they are assigned to
 admin_assignments = [
-	#{ckey = "Your Name Here", rank = "Hosting Provider"}
+	{ckey = "Your Name Here", rank = "Host"}
 ]
 # Allow admins to set their own OOC colour
 allow_admin_ooc_colour = true
 # Map of admin rank colours to their respective rank. Note you can use hex or colour name here.
 admin_rank_colour_map = [
-	{ name = "Head of Staff", colour = "#e74c3c" },
-	{ name = "Maintainer", colour = "#992d22" },
-	{ name = "Server Dev", colour = "#1abc9c" },
-	{ name = "Community Manager", colour = "#e91e63" },
-	{ name = "Game Admin", colour = "#238afa" },
-	{ name = "Trial Admin", colour = "#7fb6fc" },
-	{ name = "PR Reviewer", colour = "#c27c0e" },
-	{ name = "Mentor", colour = "#f1c40f" },
+	{ name = "Head Coder", colour = "#11806a" },
+	{ name = "Host", colour = "#290f3c" },
+	{ name = "Curator", colour = "#681a1a" },
+	{ name = "Senior Administrator", colour = "#c27c0e" },
+	{ name = "Administrator", colour = "#238afa" },
+	{ name = "Junior Administrator", colour = "#da6422" },
+	{ name = "Moderator", colour = "#f1c40f" },
+	{ name = "Mentor", colour = "#607d8b" },
 ]
 # Map of common CIDs that should not be banned, plus their reasons
 common_cid_map = [
@@ -305,9 +325,9 @@ server_features = "Medium RP, varied species/jobs"
 # Allow OOC character metadata notes
 allow_character_metadata = true
 # Lobby time before roundstart (Seconds)
-lobby_time = 240
+lobby_time = 300
 # Default timeout for world reboot (Seconds)
-restart_timeout = 75
+restart_timeout = 120
 # Forbid people without a BYOND account joining the server
 guest_ban = true
 # Allow players to use antagHUD?
@@ -449,12 +469,12 @@ job_slot_amounts = [
 	# Engineering
 	{ name = "Life Support Specialist", lowpop = 3, highpop = 4 },
 	{ name = "Station Engineer", lowpop = 5, highpop = 6 },
-	{ name = "Trainee Engineer", lowpop = 0, highpop = 0 },
+	{ name = "Trainee Engineer", lowpop = 1, highpop = 2 },
 	# Medical
 	{ name = "Chemist", lowpop = 2, highpop = 2 },
 	{ name = "Geneticist", lowpop = 2, highpop = 2 },
 	{ name = "Medical Doctor", lowpop = 5, highpop = 6 },
-	{ name = "Medical Intern", lowpop = 0, highpop = 0 },
+	{ name = "Medical Intern", lowpop = 1, highpop = 2 },
 	{ name = "Virologist", lowpop = 1, highpop = 1 },
 	# Science
 	{ name = "Roboticist", lowpop = 2, highpop = 2 },
@@ -463,7 +483,7 @@ job_slot_amounts = [
 	# Security
 	{ name = "Detective", lowpop = 1, highpop = 1 },
 	{ name = "Security Officer", lowpop = 8, highpop = 9 },
-	{ name = "Security Cadet", lowpop = 0, highpop = 0 },
+	{ name = "Security Cadet", lowpop = 2, highpop = 3 },
 	{ name = "Warden", lowpop = 1, highpop = 1 },
 	{ name = "Internal Affairs Agent", lowpop = 2, highpop = 2 },
 	# Service
@@ -479,7 +499,7 @@ job_slot_amounts = [
 	{ name = "Cargo Technician", lowpop = 3, highpop = 4 },
 	# Silicon
 	{ name = "AI", lowpop = 1, highpop = 1 },
-	{ name = "Cyborg", lowpop = 1, highpop = 1 },
+	{ name = "Cyborg", lowpop = 1, highpop = 3 },
 	# Misc
 	{ name = "Assistant", lowpop = -1, highpop = -1 },
 ]
@@ -783,7 +803,7 @@ external_tos_handler = false
 # Path to the map datum to load, overriding the defaults and `data/next_map.txt`.
 # Do not use in production.
 # Comment out to disable.
-#override_map = "/datum/map/test_tiny"
+override_map = "/datum/map/test_tiny"
 # Regional servers.
 # This is not for separate DD instances per region, but if you have a geo-routing setup deployed to optimise routing for players
 # I am 99.9% certain you will never need to fill this out
