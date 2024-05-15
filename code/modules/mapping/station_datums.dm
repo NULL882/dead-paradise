@@ -22,6 +22,7 @@
 	map_path = "_maps/map_files/stations/cerestation.dmm"
 	webmap_url = "https://webmap.affectedarc07.co.uk/maps/paradise/cerestation/"
 	min_players_random = 60
+	voteable = FALSE
 
 /datum/map/test_tiny
 	fluff_name = "test_tiny"
