@@ -36,7 +36,7 @@
 	Probably best to stay clear."
 	suffix = "lavaland_surface_ash_walker1.dmm"
 	allow_duplicates = FALSE
-	cost = 20 // Not auto due to the nature of walkers
+	always_place = TRUE
 
 /datum/map_template/ruin/lavaland/free_golem
 	name = "Free Golem Ship"
