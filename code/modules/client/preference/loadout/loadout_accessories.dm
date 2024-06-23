@@ -231,3 +231,8 @@
 	display_name = "Armband, service"
 	path = /obj/item/clothing/accessory/armband/service
 	allowed_roles = list("Head of Personnel", "Chaplain", "Janitor", "Botanist", "Chef", "Bartender", "Clown", "Mime", "Librarian", "Barber")
+
+/datum/gear/accessory/cbtmantle // Мантия для истенных ЗБТшников
+	display_name = "Стильная мантия"
+	path = /obj/item/clothing/suit/mantle/mkcbt
+	donator_tier = 2
